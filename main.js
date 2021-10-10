@@ -80,3 +80,12 @@ Array(200).fill().forEach(addStar);
 
 const spaceTexture = new THREE.TextureLoader().load("space.jpg");
 scene.background = spaceTexture;
+
+// Avatar:
+
+const friendsTexture = new THREE.TextureLoader().load("friends.jpg");
+const friends = new THREE.Mesh(
+  new THREE.BoxGeometry(3, 3, 3),
+  new THREE.MeshBasicMaterial({ map: friendsTexture })
+);
+scene.add(friends);
