@@ -27,3 +27,15 @@ camera.position.setX(-3);
 
 // Render in renderer means draw it
 renderer.render(scene, camera);
+
+// Torus:
+
+// Add objest to the screen:
+// Big 3D ring
+const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
+// Material is like a wrapping paper for an object (MeshBasicMaterial need no light)
+const material = new THREE.MeshStandardMaterial({ color: 0xff6347 });
+
+const torus = new THREE.Mesh(geometry, material);
+
+scene.add(torus);
