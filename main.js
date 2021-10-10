@@ -2,6 +2,11 @@ import "./style.css";
 import * as THREE from "three";
 // OrbitControls allows us to move around the scene using our mouse
 // import { OrbitControls } from "three/examples/jsm/controls/orbitcontrols";
+// Images:
+import spaceImg from "./space.jpg";
+import moonImg from "./moon.jpg";
+import normalImg from "./normal.jpg";
+import friendsImg from "./friends.jpg";
 
 // Setup:
 
@@ -78,12 +83,12 @@ Array(200).fill().forEach(addStar);
 
 // Background:
 
-const spaceTexture = new THREE.TextureLoader().load("space.jpg");
+const spaceTexture = new THREE.TextureLoader().load(spaceImg);
 scene.background = spaceTexture;
 
 // Avatar:
 
-const friendsTexture = new THREE.TextureLoader().load("friends.jpg");
+const friendsTexture = new THREE.TextureLoader().load(friendsImg);
 const friends = new THREE.Mesh(
   new THREE.BoxGeometry(3, 3, 3),
   new THREE.MeshBasicMaterial({ map: friendsTexture })
@@ -95,8 +100,8 @@ friends.position.x = 2;
 
 // Moon:
 
-const moonTexture = new THREE.TextureLoader().load("moon.jpg");
-const normalTexture = new THREE.TextureLoader().load("normal.jpg");
+const moonTexture = new THREE.TextureLoader().load(moonImg);
+const normalTexture = new THREE.TextureLoader().load(normalImg);
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
   new THREE.MeshStandardMaterial({
