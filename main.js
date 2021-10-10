@@ -89,3 +89,22 @@ const friends = new THREE.Mesh(
   new THREE.MeshBasicMaterial({ map: friendsTexture })
 );
 scene.add(friends);
+
+friends.position.z = -5;
+friends.position.x = 2;
+
+// Moon:
+
+const moonTexture = new THREE.TextureLoader().load("moon.jpg");
+const normalTexture = new THREE.TextureLoader().load("normal.jpg");
+const moon = new THREE.Mesh(
+  new THREE.SphereGeometry(3, 32, 32),
+  new THREE.MeshStandardMaterial({
+    map: moonTexture,
+    normalMap: normalTexture,
+  })
+);
+scene.add(moon);
+
+moon.position.z = 30;
+moon.position.setX(-10);
