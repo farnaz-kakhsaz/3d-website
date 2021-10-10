@@ -56,3 +56,22 @@ scene.add(pointLight, ambientLight);
 
 // What this will do is listen to DOM events on the mouse and update the camera position accordingly
 // const controls = new OrbitControls(camera, renderer.domElement);
+
+// Star:
+
+function addStar() {
+  const geometry = new THREE.SphereGeometry(0.25, 24, 24);
+  const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
+  const star = new THREE.Mesh(geometry, material);
+
+  // Randomly position stars through the scene
+  const [x, y, z] = Array(3)
+    .fill()
+    .map(() => THREE.MathUtils.randFloatSpread(100));
+
+  star.position.set(x, y, z);
+  scene.add(star);
+}
+
+// How many stars do we want to add to the scene?
+Array(200).fill().forEach(addStar);
