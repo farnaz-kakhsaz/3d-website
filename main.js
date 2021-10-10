@@ -1,7 +1,7 @@
 import "./style.css";
 import * as THREE from "three";
 // OrbitControls allows us to move around the scene using our mouse
-import { OrbitControls } from "three/examples/jsm/controls/orbitcontrols";
+// import { OrbitControls } from "three/examples/jsm/controls/orbitcontrols";
 
 // Setup:
 
