@@ -30,9 +30,6 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 camera.position.setZ(30);
 camera.position.setX(-3);
 
-// Render in renderer means draw it
-renderer.render(scene, camera);
-
 // Torus:
 
 // Add objest to the screen:
@@ -146,8 +143,9 @@ function animate() {
 
   moon.rotation.x += 0.005;
 
-  //   controls.update();
+  // controls.update();
 
+  // Render in renderer means draw it
   renderer.render(scene, camera);
 }
 
